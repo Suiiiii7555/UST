@@ -1,8 +1,8 @@
 class BankAccount:
-    def __init__(self , account_no , name , balance=0):
+    def __init__(self  , name , account_no , balance=0):
         print("Your bank account has been created.")
-        self.account_no = account_no
         self.name = name
+        self.account_no = account_no
         self.balance = balance
 
     
@@ -15,3 +15,6 @@ class BankAccount:
             self.balance = self.balance - amount_withdrawal
         else:
             print("Please check your balance")
+
+    def __str__(self):
+        return f"Bank Account Details :\n{self.name}\n{self.account_no}\n{self.balance}"
