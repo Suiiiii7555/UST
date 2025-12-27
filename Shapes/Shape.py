@@ -20,7 +20,7 @@ class Circle(shapes):
         self.radius = radius
 
     def area(self):
-        return f"Area of circle is : {math.pi * (self.radius ** 2)} cm²"
+        return f"Area of circle is : {math.pi * (self.radius ** 2) : .2f} cm²"
 
 
 class Rectangle(shapes):
@@ -37,5 +37,5 @@ class Rectangle(shapes):
 c1 = Circle("red",10)
 r1 = Rectangle("blue", 10, 8)
 
-print(f"Area of circle {c1.area()}")
-print(f"Area of rectangle {r1.area()}")
+print(c1.area())
+print(r1.area())
