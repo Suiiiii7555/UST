@@ -28,11 +28,20 @@ class TV:
         else:
             raise ValueError("Value provided does not fall in the range of 1 to 10")
 
+    ## USING THE PROPERTY METHOD TO CONVERT GETTERS AND SETTERS INTO ATTRIBUTES / OBJECTS
+
+    volume = property(get_volume, set_volume)
+    channel = property(get_channel_no, set_channel_no)
+
+                                                                                                                          
 TV1 = TV()
 # print(TV1.get_channel_no())
 # print(TV1.get_status())
 # TV1.set_volume(200)
 # TV1.set_channel_no(11)
-TV1.set_volume(20)
-TV1.set_channel_no(10)
+# TV1.set_volume(20) 
+# TV1.set_channel_no(10)
+## THE ABOVE TWO LINES ARE BY PASSED BY THE USE PROPERTY METHOD
+TV1.volume = 90
+TV1.channel = 10
 print(TV1)
